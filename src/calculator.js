@@ -35,6 +35,9 @@ export function setupCalculator(display, historyList) {
           expression = "Error";
         }
       } else {
+        if (expression === "Error") {
+          expression = "";
+        }
         expression += btn.textContent;
       }
       updateDisplay();
